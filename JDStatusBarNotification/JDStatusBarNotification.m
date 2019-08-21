@@ -522,7 +522,7 @@ static CGFloat topBarHeightAdjustedForIphoneX(JDStatusBarStyle *style, CGFloat h
 
 - (void)updateTopBarFrameWithStatusBarFrame:(CGRect)rect;
 {
-  CGFloat width = MAX(rect.size.width, rect.size.height);
+  CGFloat width = self.overlayWindow.rootViewController.view.frame.size.width;
   CGFloat height = MIN(rect.size.width, rect.size.height);
 
   // adjust position for iOS 7, if statusBar has double height
